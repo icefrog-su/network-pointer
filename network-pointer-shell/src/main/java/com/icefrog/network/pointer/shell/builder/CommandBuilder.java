@@ -15,8 +15,8 @@ package com.icefrog.network.pointer.shell.builder;
  */
 public interface CommandBuilder<T> extends Builder<T> {
 
-    void prepare() throws BuilderException;
+    void prepare() throws NetworkPointerException;
 
-    void release() throws BuilderException;
+    void release() throws NetworkPointerException;
 
 }

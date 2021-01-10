@@ -13,6 +13,6 @@ package com.icefrog.network.pointer.shell.builder;
  */
 public interface Builder<T> {
 
-    T build() throws BuilderException;
+    T build() throws NetworkPointerException;
 
 }

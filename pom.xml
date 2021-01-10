@@ -33,10 +33,68 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+
+    <network-pointer-common.version>1.0.0-SNAPSHOT</network-pointer-common.version>
+    <network-pointer-config.version>1.0.0-SNAPSHOT</network-pointer-config.version>
+    <network-pointer-management.version>1.0.0-SNAPSHOT</network-pointer-management.version>
+    <network-pointer-registry.version>1.0.0-SNAPSHOT</network-pointer-registry.version>
+    <network-pointer-server.version>1.0.0-SNAPSHOT</network-pointer-server.version>
+    <network-pointer-shell.version>1.0.0-SNAPSHOT</network-pointer-shell.version>
+    <network-pointer-spider.version>1.0.0-SNAPSHOT</network-pointer-spider.version>
+    <network-pointer-transport.version>1.0.0-SNAPSHOT</network-pointer-transport.version>
   </properties>
 
-  <dependencies>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-common</artifactId>
+        <version>${network-pointer-common.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-config</artifactId>
+        <version>${network-pointer-config.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-management</artifactId>
+        <version>${network-pointer-management.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-registry</artifactId>
+        <version>${network-pointer-registry.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-server</artifactId>
+        <version>${network-pointer-server.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-shell</artifactId>
+        <version>${network-pointer-shell.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-spider</artifactId>
+        <version>${network-pointer-spider.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.icefrog.network.pointer</groupId>
+        <artifactId>network-pointer-transport</artifactId>
+        <version>${network-pointer-transport.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

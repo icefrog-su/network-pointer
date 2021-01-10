@@ -7,13 +7,18 @@
 
 package com.icefrog.network.pointer.shell.builder;
 
+import lombok.Getter;
+
 /**
  * @author icefrog.lsw
  * @version : AbstractCommandBuilder.java, v 0.1 2021年01月10日 00:37 icefrog.lsw Exp $
  */
+@Getter
 public abstract class AbstractCommandBuilder<T> implements CommandBuilder<T> {
 
-    protected boolean autoRelease = false;
+    private boolean autoRelease = false;
+
+    private String version;
 
     public AbstractCommandBuilder(boolean autoRelease) {
         this.autoRelease = autoRelease;
@@ -23,33 +28,17 @@ public abstract class AbstractCommandBuilder<T> implements CommandBuilder<T> {
     }
 
     @Override
-    public T build() throws BuilderException {
-        // prepare the build
-        this.prepare();
-
-        // do build
-        T client = this.doBuild();
-
-        // release the build,if auto release is true
-        if (autoRelease) {
-            this.release();
-        }
-        return client;
-    }
-
-    protected abstract void doRelease() throws BuilderException;
-
-    protected abstract void doPrepare() throws BuilderException;
-
-    protected abstract T doBuild() throws BuilderException;
-
-    @Override
-    public void prepare() throws BuilderException {
-        this.doPrepare();
+    public T build() throws NetworkPointerException {
+        return null;
     }
 
     @Override
-    public void release() throws BuilderException {
-        this.doRelease();
+    public void prepare() throws NetworkPointerException {
+
+    }
+
+    @Override
+    public void release() throws NetworkPointerException {
+
     }
 }

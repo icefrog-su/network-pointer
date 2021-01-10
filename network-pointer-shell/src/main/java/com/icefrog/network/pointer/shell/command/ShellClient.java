@@ -25,8 +25,4 @@ public class ShellClient {
         return "message: " + message;
     }
 
-    public static void main(String[] args) {
-
-    }
-
 }
