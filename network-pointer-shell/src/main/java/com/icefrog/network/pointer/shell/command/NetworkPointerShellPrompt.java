@@ -15,10 +15,10 @@ import org.springframework.stereotype.Component;
 /**
  * Network pointer's shell prompt
  * @author icefrog.lsw
- * @version : CommandShellPrompt.java, v 0.1 2021年01月10日 00:34 icefrog.lsw Exp $
+ * @version : NetworkPointerShellPrompt.java, v 0.1 2021年01月10日 00:34 icefrog.lsw Exp $
  */
 @Component
-public class CommandShellPrompt implements PromptProvider {
+public class NetworkPointerShellPrompt implements PromptProvider {
 
     @Override
     public AttributedString getPrompt() {
